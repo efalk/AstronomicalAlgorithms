@@ -56,12 +56,15 @@
 #ifdef ASTROALGO
    #include <assert.h>
    #include <stdio.h>
-   #include "AstroAlgo.h"
-   __declspec(dllexport) short __stdcall
+   #include "AstronomicalAlgorithms.h"
+   #if _WIN32
+       __declspec(dllexport) short __stdcall
+   #endif
 #else
    short
 #endif
 
+int
 ShIsLeapYear(short *pshResult, short shYear, short shCalendar)
                   /* shCalendar JULIAN for julian, GREGORIAN for gregorian */
    {

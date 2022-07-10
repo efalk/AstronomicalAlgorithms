@@ -62,19 +62,6 @@ It is easier to re-direct it to a file and then read this file with an editor
 
 #include "AstronomicalAlgorithms.h"
 
-#include "InterpolationDifferences.c"
-#include "IsLeapYear.c"
-#include "JulianDay.c"
-#include "DateFromJulianDay.c"
-#include "DayOfWeek.c"
-#include "DayOfYear.c"
-#include "DateFromYearDay.c"
-#include "EasterSunday.c"
-#include "RhoSinPhiTwo.c"
-#include "RhoCosPhiTwo.c"
-#include "MoonPhasesJDE.c"
-#include "SolarCoordinates.c"
-
 /****************************************************************************/
 
 

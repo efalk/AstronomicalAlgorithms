@@ -133,6 +133,38 @@ It is easier to re-direct it to a file and then read this file with an editor
 
 /****************************************************************************/
 
+int ShDateFromJulianDay(double doJD, double *pdoY, double *pdoMonth, double *pdoD,
+			double *pdoH, double *pdoMin,   double *pdoS);
+
+
+int ShDateFromYearDay(double doYD, short shYear, double *pdoM, double *pdoD);
+int ShDayOfWeek(short *pshDOW, double doY, double doM, double doD);
+int ShDayOfYear(short *pshDOY, double doY, double doM, double doD);
+
+int ShEasterSunday(short shYear, short *pshM, short *pshD, short shCalendar, short shReligion);
+
+int ShGreenwichMeanSideralTime(double *pdoGreenwichSideralTime, short shY,
+                               short shM, short shD, short shH, short shm,
+                               short shS, short shCalendar, short shMode);
+
+short ShInterpolationDifferences(double * padoTableValues,
+                                 short shNumberOfTableValues,
+                                 double * padoDifferences,
+                                 size_t stSizeOfpadoDifferences,
+                                 short shDifferenceRank);
+
+int ShIsLeapYear(short *pshResult, short shYear, short shCalendar);
+
+int ShJulianDay(double *pdoJD, double doY, double doM, double doD, short shCalendar);
+
+int ShMoonPhaseJDE(double *pdoResult, double doYear, short shPhase);
+
+double DoRhoCosPhiTwo(double doPhi, double doHeight);
+double DoRhoSinPhiTwo(double doPhi, double doHeight);
+
+int ShSolarCoordinates(double doJD, double *pdoalpha, double *pdodelta, short shMethod);
+
+
 #endif
 
 /* eod of file */

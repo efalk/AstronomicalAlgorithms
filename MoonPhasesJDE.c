@@ -61,15 +61,18 @@
 #ifdef ASTROALGO
    #include <math.h>
    #include <stdio.h>
-   #include "AstroAlgo.h"
+   #include "AstronomicalAlgorithms.h"
 
-   __declspec(dllexport) short __stdcall
+   #if _WIN32
+       __declspec(dllexport) short __stdcall
+   #endif
 #else
    short
 #endif
 
 #define D (double)
 
+int
 ShMoonPhaseJDE(double *pdoResult, double doYear, short shPhase)
    {
    double ado1[25][7] = {  /* page 351 */

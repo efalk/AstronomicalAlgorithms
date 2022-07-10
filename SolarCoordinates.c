@@ -60,13 +60,16 @@
 #ifdef ASTROALGO
    #include <math.h>
    #include <stdio.h>
-   #include "AstroAlgo.h"
+   #include "AstronomicalAlgorithms.h"
 
-   __declspec(dllexport) short __stdcall
+   #if _WIN32
+       __declspec(dllexport) short __stdcall
+   #endif
 #else
    short
 #endif
 
+int
 ShSolarCoordinates(double doJD, double *pdoalpha, double *pdodelta,
                    short shMethod)
            /* method = 1 : "low accuracy",    p.163
@@ -85,8 +88,8 @@ ShSolarCoordinates(double doJD, double *pdoalpha, double *pdodelta,
       *pdodelta = (double) 0;
       }
 
-   if (   ((shMethod == 1) && (doJD < 0) || (doJD > 9999999))
-       || ((shMethod == 2) && (doJD < 0) || (doJD > 9999999))
+   if (   (((shMethod == 1) && (doJD < 0)) || (doJD > 9999999))
+       || (((shMethod == 2) && (doJD < 0)) || (doJD > 9999999))
       )
       {
       shReturnValue = (short) 1;

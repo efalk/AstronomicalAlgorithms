@@ -58,6 +58,10 @@
 
 /* see page 23 */
 
+#include <stddef.h>
+
+#include "AstronomicalAlgorithms.h"
+
 short ShInterpolationDifferences(double * padoTableValues,
                                  short shNumberOfTableValues,
                                  double * padoDifferences,

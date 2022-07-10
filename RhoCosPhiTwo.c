@@ -48,6 +48,11 @@ converted value
 @endif
 */
 
+#include <math.h>
+#include <stddef.h>
+
+#include "AstronomicalAlgorithms.h"
+
 /* see page 82 */
 
 double DoRhoCosPhiTwo(double doPhi, double doHeight)

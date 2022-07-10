@@ -64,13 +64,16 @@
 #ifdef ASTROALGO
    #include <math.h>
    #include <stdio.h>
-   #include "AstroAlgo.h"
+   #include "AstronomicalAlgorithms.h"
 
-   __declspec(dllexport) short __stdcall
+   #if _WIN32
+       __declspec(dllexport) short __stdcall
+   #endif
 #else
    short
 #endif
 
+int
 ShJulianDay(double *pdoJD, double doY, double doM, double doD, short shCalendar)
             /* shCalendar JULIAN for julian, GREGORIAN for gregorian */
    {
